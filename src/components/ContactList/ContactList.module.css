@@ -1,0 +1,42 @@
+.ClassList {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  min-width: 380px;
+  padding: 10px;
+}
+
+.ClassList__title {
+  color: #252b31;
+  margin-bottom: 10px;
+}
+
+.ClassList__item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  width: 300px;
+  padding: 10px;
+
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #252b31;
+  background-color: #f6fafb;
+  border-radius: 20px;
+}
+
+.ClassList__item:not(:last-child) {
+  margin-bottom: 5px;
+}
+
+.ClassList__name {
+  margin-right: 10px;
+  font-size: 1.1rem;
+}
+
+.ClassList__phone {
+  font-size: 1.1rem;
+}
