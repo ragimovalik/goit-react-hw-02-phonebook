@@ -16,13 +16,23 @@ class App extends Component {
     filter: '',
   };
 
+  contactsChecker = name => {
+    const { contacts } = this.state;
+
+    return contacts.find(contact =>
+      contact.name.toLowerCase().includes(name.toLowerCase()),
+    );
+  };
+
   formSubmitHandler = ({ name, number }) => {
     const idSetter = `id-${Math.ceil(Math.random() * 100000)}`;
     const newContact = { id: idSetter, name, number };
 
-    return this.setState(contacts => ({
-      contacts: [...this.state.contacts, newContact],
-    }));
+    this.contactsChecker(name)
+      ? alert(`${name} is already in contacts`)
+      : this.setState(contacts => ({
+          contacts: [...this.state.contacts, newContact],
+        }));
   };
 
   filterHandler = ({ currentTarget }) => {
@@ -33,12 +43,27 @@ class App extends Component {
 
   filteredContacts = () => {
     const { contacts, filter } = this.state;
-    const normalizedText = filter.toLocaleLowerCase();
+    const normalizedText = filter.toLowerCase();
 
     return contacts.filter(contact =>
-      contact.name.toLocaleLowerCase().includes(normalizedText),
+      contact.name.toLowerCase().includes(normalizedText),
     );
   };
+
+  deleteHandler = id => {
+    // const { contacts } = this.state;
+    console.log(id);
+
+    this.setState(prevState => ({
+      contacts: prevState.contacts.filter(contact => contact.id !== id),
+    }));
+  };
+
+  /*
+  this.setState(prevState => ({
+      todos: prevState.todos.filter(todo => todo.id !== todoId),
+    }));
+*/
 
   render() {
     return (
@@ -46,14 +71,13 @@ class App extends Component {
         <PageTitle title={'HomeWork #2-Phonebook of React'} />
         <Form onSubmitData={this.formSubmitHandler} />
         <Filter contacts={this.state.filter} onChange={this.filterHandler} />
-        <ContactList contacts={this.filteredContacts()} />
+        <ContactList
+          contacts={this.filteredContacts()}
+          onClick={this.deleteHandler}
+        />
       </>
     );
   }
 }
 
 export default App;
-
-/*
-
-*/

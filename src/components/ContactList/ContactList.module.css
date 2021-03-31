@@ -1,4 +1,4 @@
-.ClassList {
+.ContactList {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -8,18 +8,18 @@
   padding: 10px;
 }
 
-.ClassList__title {
+.ContactList__title {
   color: #252b31;
   margin-bottom: 10px;
 }
 
-.ClassList__item {
+.ContactList__item {
   display: flex;
   justify-content: space-between;
   align-items: center;
 
-  width: 300px;
-  padding: 10px;
+  width: 350px;
+  padding: 5px;
 
   font-size: 1.1rem;
   font-weight: 500;
@@ -28,15 +28,28 @@
   border-radius: 20px;
 }
 
-.ClassList__item:not(:last-child) {
+.ContactList__item:not(:last-child) {
   margin-bottom: 5px;
 }
 
-.ClassList__name {
-  margin-right: 10px;
-  font-size: 1.1rem;
+.ContactList__item:hover,
+.ContactList__item:focus {
+  background-color: #e0e8e5;
 }
 
-.ClassList__phone {
-  font-size: 1.1rem;
+.ContactList__name {
+  flex-basis: 55%;
+  display: block;
+  margin-right: 5px;
+  font-size: 1.2rem;
+}
+
+.ContactList__phone {
+  flex-basis: 30%;
+  font-size: 1.2rem;
+}
+
+.ContactList__icon:hover,
+.ContactList__icon:focus {
+  fill: red;
 }

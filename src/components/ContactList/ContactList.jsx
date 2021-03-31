@@ -1,15 +1,30 @@
 import PropTypes from 'prop-types';
 import styles from './ContactList.module.css';
+import { MdDelete } from 'react-icons/md';
+import { IconContext } from 'react-icons';
 
-const ContactList = ({ contacts }) => (
-  <div className={styles.ClassList}>
-    <h3 className={styles.ClassList__title}>Contact List</h3>
+const ContactList = ({ contacts, onClick }) => (
+  <div className={styles.ContactList}>
+    <h3 className={styles.ContactList__title}>Contact List</h3>
     <ul>
       {contacts.map(contact => {
         return (
-          <li key={contact.id} className={styles.ClassList__item}>
-            <p className={styles.ClassList__name}>{contact.name}</p>
-            <p className={styles.ClassList__phone}>{contact.number}</p>
+          <li key={contact.id} className={styles.ContactList__item}>
+            <p className={styles.ContactList__name}>{contact.name}</p>
+            <p className={styles.ContactList__phone}>{contact.number}</p>
+
+            <IconContext.Provider
+              value={{
+                color: 'inherit',
+                size: '1.2rem',
+                className: 'global-class-name',
+                title: 'delete',
+              }}
+            >
+              <div onClick={() => onClick(contact.id)}>
+                <MdDelete className={styles.ContactList__icon} />
+              </div>
+            </IconContext.Provider>
           </li>
         );
       })}
@@ -18,11 +33,11 @@ const ContactList = ({ contacts }) => (
 );
 
 /*
-ClassList
-ClassList__title
-ClassList__item
-ClassList__description
-ClassList__value
+ContactList
+ContactList__title
+ContactList__item
+ContactList__description
+ContactList__value
 
 */
 
