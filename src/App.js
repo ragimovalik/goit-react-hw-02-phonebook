@@ -51,19 +51,10 @@ class App extends Component {
   };
 
   deleteHandler = id => {
-    // const { contacts } = this.state;
-    console.log(id);
-
     this.setState(prevState => ({
       contacts: prevState.contacts.filter(contact => contact.id !== id),
     }));
   };
-
-  /*
-  this.setState(prevState => ({
-      todos: prevState.todos.filter(todo => todo.id !== todoId),
-    }));
-*/
 
   render() {
     return (
