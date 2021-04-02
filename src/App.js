@@ -9,9 +9,10 @@ import './App.css';
 class App extends Component {
   state = {
     contacts: [
-      { id: 'id-12345', name: 'Daniel Defoe', number: '9876541210' },
-      { id: 'id-54321', name: 'Jonathan Swift', number: '9876542210' },
-      { id: 'id-98765', name: 'Robert Stevenson', number: '9876543210' },
+      { id: 'id-12345', name: 'Daniel Defoe', number: '987-6541210' },
+      { id: 'id-54321', name: 'Jonathan Swift', number: '987-6542210' },
+      { id: 'id-98765', name: 'Robert Stevenson', number: '987-6543210' },
+      { id: 'id-56789', name: 'Lewis Carroll', number: '987-6544210' },
     ],
     filter: '',
   };

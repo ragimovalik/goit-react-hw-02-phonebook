@@ -32,15 +32,6 @@ const ContactList = ({ contacts, onClick }) => (
   </div>
 );
 
-/*
-ContactList
-ContactList__title
-ContactList__item
-ContactList__description
-ContactList__value
-
-*/
-
 ContactList.propTypes = {
   contacts: PropTypes.arrayOf(
     PropTypes.shape({

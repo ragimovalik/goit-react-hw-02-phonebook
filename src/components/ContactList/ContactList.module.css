@@ -18,7 +18,7 @@
   justify-content: space-between;
   align-items: center;
 
-  width: 350px;
+  width: 370px;
   padding: 5px;
 
   font-size: 1.1rem;
@@ -26,6 +26,8 @@
   color: #252b31;
   background-color: #f6fafb;
   border-radius: 20px;
+
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .ContactList__item:not(:last-child) {
@@ -45,7 +47,8 @@
 }
 
 .ContactList__phone {
-  flex-basis: 30%;
+  flex-basis: 35%;
+  margin-right: 5px;
   font-size: 1.2rem;
 }
 

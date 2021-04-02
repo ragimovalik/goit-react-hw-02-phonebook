@@ -1,8 +1,18 @@
 import PropTypes from 'prop-types';
-import styles from './PageTitle.module.css';
+import { createUseStyles } from 'react-jss';
+
+const useStyles = createUseStyles({
+  PageTitle: {
+    marginBottom: 20,
+    padding: 10,
+    textAlign: 'center',
+  },
+});
 
 const PageTitle = ({ title }) => {
-  return <h1 className={styles.PageTitle}>{title}</h1>;
+  const classes = useStyles();
+
+  return <h1 className={classes.PageTitle}>{title}</h1>;
 };
 
 PageTitle.propTypes = {
