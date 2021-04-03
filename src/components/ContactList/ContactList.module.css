@@ -1,3 +1,6 @@
+@value colors: '../../colors.css';
+@value bgcPrimary, text, lightened, red from colors;
+
 .ContactList {
   display: flex;
   flex-direction: column;
@@ -9,7 +12,7 @@
 }
 
 .ContactList__title {
-  color: #252b31;
+  color: text;
   margin-bottom: 10px;
 }
 
@@ -23,8 +26,8 @@
 
   font-size: 1.1rem;
   font-weight: 500;
-  color: #252b31;
-  background-color: #f6fafb;
+  color: text;
+  background-color: lightened;
   border-radius: 20px;
 
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -36,7 +39,7 @@
 
 .ContactList__item:hover,
 .ContactList__item:focus {
-  background-color: #e0e8e5;
+  background-color: bgcPrimary;
 }
 
 .ContactList__name {

@@ -1,4 +1,5 @@
-/* Vars for color and transition */
+@value colors: '../../colors.css';
+@value bgcPrimary, darkened, text from colors;
 
 .Form__wrap {
   display: flex;
@@ -10,19 +11,19 @@
   margin-bottom: 10px;
 
   border-radius: 5px;
-  background-color: #e0e8e5;
+  background-color: bgcPrimary;
 }
 
 .Form__label {
   font-style: italic;
-  color: #252b31;
+  color: text;
   font-weight: 500;
 }
 
 .Form__input {
   width: 270px;
   height: 35px;
-  border: 1px solid #597387;
+  border: 1px solid darkened;
   border-radius: 5px;
   outline: none;
 
@@ -31,7 +32,7 @@
 
 .Form__input:hover,
 .Form__input:focus {
-  border: 2px solid #597387;
+  border: 2px solid darkened;
 }
 
 .Form__input::placeholder {

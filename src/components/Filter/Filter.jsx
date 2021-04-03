@@ -13,7 +13,6 @@ const Filter = ({ contacts, onChange }) => {
         type={'text'}
         id={'filter'}
         name={'filter'}
-        // pattern={"^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"}
         pattern={'text'}
         placeholder={'Name'}
         required={false}

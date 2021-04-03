@@ -22,7 +22,7 @@ const InputBox = ({
   return (
     <div className={styles.Form__wrap}>
       <label htmlFor={htmlFor} className={styles.Form__label}>
-        <span>{labelText}:</span>
+        <span>{labelText}</span>
       </label>
 
       <input
@@ -39,6 +39,12 @@ const InputBox = ({
       />
     </div>
   );
+};
+
+InputBox.defaultProps = {
+  title: 'Please enter some text',
+  required: true,
+  labelText: 'Label for -->',
 };
 
 InputBox.propTypes = {

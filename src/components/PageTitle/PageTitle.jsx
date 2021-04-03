@@ -6,6 +6,7 @@ const useStyles = createUseStyles({
     marginBottom: 20,
     padding: 10,
     textAlign: 'center',
+    color: '#252b31',
   },
 });
 

@@ -4,7 +4,6 @@ import PageTitle from './components/PageTitle/PageTitle';
 import Form from './components/Form/Form';
 import ContactList from './components/ContactList/ContactList';
 import Filter from './components/Filter/Filter';
-import './App.css';
 
 class App extends Component {
   state = {
