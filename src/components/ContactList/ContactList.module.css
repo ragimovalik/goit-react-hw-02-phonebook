@@ -30,7 +30,7 @@
   background-color: lightened;
   border-radius: 20px;
 
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 400ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .ContactList__item:not(:last-child) {
