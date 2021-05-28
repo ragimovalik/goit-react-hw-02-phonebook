@@ -61,7 +61,10 @@ class App extends Component {
       <>
         <PageTitle title={'HomeWork #2-Phonebook of React'} />
         <Form onSubmitData={this.formSubmitHandler} />
-        <Filter contacts={this.state.filter} onChange={this.filterHandler} />
+        <Filter
+          textForFilter={this.state.filter}
+          onChange={this.filterHandler}
+        />
         <ContactList
           contacts={this.filteredContacts()}
           onClick={this.deleteHandler}
